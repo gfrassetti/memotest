@@ -1,0 +1,26 @@
+.logo {
+  text-align: center;
+  object-fit: fill;
+}
+
+.jugadas {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carta-container {
+  display: flex;
+  justify-content: center;
+}
+
+.carta {
+  width: 130px;
+  border-radius: 4px;
+}
+
+* {
+  transition: all 0.3s ease;
+  user-select: none;
+  font-family: "Bebas Neue", cursive;
+}

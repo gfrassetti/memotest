@@ -6,86 +6,82 @@
     <title>Memotest</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="src/index.css">
     <script src='main.js'></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid h100">
         <div class="row">
-          <div class="col-lg-12 col-sm-12 col-12 container-imagen">
             <div class="logo">
-              <img src="./src/imgs/logo/logo4.png" class="snk-logo">
+              <img src="src/img/johndeere-memoria-01-logo.webp" id="imglogo">
             </div>
-          </div>
+        </div>
         </div>
         <div class="jugadas" id="jugadas">
           <div class="row">
             <div class="col-lg-6 col-sm-6 col-6 puntaje">
-              <label for="puntaje" id="puntaje-texto" class="puntaje-maximo">Puntaje:</label>
-              <input type="text" name="puntaje" id="puntaje-valor" class="puntaje-ronda" value="0" disabled>
+              <label id="puntaje-texto" class="puntaje-maximo">Puntaje:</label>
             </div>
-            <div class="col-lg-6 col-sm-6 col-6 max-intentos">
-              <label for="max-intentos" id="intentos-texto" class="intentos-texto">Intentos:</label>
-              <input type="text" name="intentos" id="intentos-valor" class="puntaje-ronda" value="0" disabled>
-              <label for="max-intentos" id="intentos-diez" class="intentos-diez">/10</label>
+            <div class="col-lg-6 col-sm-6 col-6 intentos">
+              <label id="intentos" class="intentos">Intentos:</label>
             </div>
           </div>
         </div>
-        <div class="tablero-container">
-          <div id="memotest">
+        <div class="cartas-container">
             <div class="row">
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
-              </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
-              </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
-              </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
-              <div class="col-lg-3 col-sm-3 col-3 card-container">
-                <img src="./src/imgs/cards/card-backwards.png" class="card-size">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
+              </div>
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
+              </div>
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
+              </div>
+              <div class="col-lg-3 col-sm-3 col-3 carta-container">
+                <img src="./src/imgs/cards/card-backwards.png" class="carta">
               </div>
             </div>
           </div>
