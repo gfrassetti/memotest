@@ -1,24 +1,15 @@
 .logo {
   text-align: center;
   object-fit: fill;
+  max-width: 100%;
+  height: auto;
+  transform: scale(1.5);
+  margin-top: 2cm;
 }
 
 .jugadas {
   text-align: center;
-  display: flex;
-  justify-content: space-around;
-}
-
-.cartas-container {
-  display: flex;
-  justify-content: center;
-}
-
-.carta {
-  width: 130px;
-  border-radius: 4px;
-  max-width: 100%;
-  max-height: 100%;
+  margin-top: 3cm;
 }
 
 * {
@@ -27,11 +18,26 @@
   font-family: "Bebas Neue", cursive;
 }
 
-div.carta-container {
+.cartas-container {
+  display: grid;
+  justify-content: center;
   cursor: pointer;
+  margin-top: 30px;
+}
+
+.carta {
+  width: 380px;
+  border-radius: 4px;
+}
+
+.div-carta {
+  cursor: pointer;
+  margin-top: 3px;
+  width: 300px;
 }
 
 .row {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 60px;
 }
