@@ -2,7 +2,7 @@
   "name": "memotest",
   "version": "1.0.0",
   "description": "Juego Memotetest clase 11 r/argentina programa",
-  "main": "index.js",
+  "main": "index.html",
   "dependencies": {
     "bootstrap": "^5.1.0"
   },
