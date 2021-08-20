@@ -1,0 +1,24 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "Juego Memotetest clase 11 r/argentina programa",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfrassetti/memotest.git"
+  },
+  "author": "Guido Frassetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gfrassetti/memotest/issues"
+  },
+  "homepage": "https://github.com/gfrassetti/memotest#readme"
+}
