@@ -6,12 +6,13 @@ function repartirCartas()
 {
     for (let i = 0; i < cartas.length; i++)
     {
-        let srcCartaFrente = asiganarCarta()
-        cartas[i].src = srcCartaFrente       
+        let srcCartaFrente = asiganarCartaFrente()
+        cartas[i].src = srcCartaFrente
     }
+
 }
 
-function asiganarCarta()
+function asiganarCartaFrente()
 {
 
     var cartadeFrente = listaCartas[Math.floor(Math.random() * listaCartas.length)];
