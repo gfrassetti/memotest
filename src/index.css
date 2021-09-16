@@ -21,19 +21,23 @@
 .cartas-container {
   display: grid;
   justify-content: center;
-  cursor: pointer;
-  margin-top: 30px;
+  margin-top: 4cm;
 }
 
 .carta {
   width: 380px;
   border-radius: 4px;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .div-carta {
   cursor: pointer;
   margin-top: 3px;
-  width: 300px;
+  width: 380px;
+  height: 557px;
+  margin: 20px;
 }
 
 .row {
