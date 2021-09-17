@@ -14,7 +14,36 @@ function repartirCartas()
 
 function asiganarCartaFrente()
 {
+    var cartadeFrente = listaCartas[Math.floor(Math.random() * listaCartas.length)];
+    return cartadeFrente
+}
+
+/*
+function desbloquearInput()
+{
+    cartas.forEach(function($carta) {
+        $carta.onclick = inputUsuario
+    })
+}
+
+function inputUsuario(e)
+{
+    const $carta = e.target
+    console.log($carta)
+    mostrarCarta($carta)
+
+}
+
+function mostrarCarta($carta)
+{
+    let srcCartaFrente = asiganarCartaFrente()
+    $carta.src = srcCartaFrente
+}
+
+function asiganarCartaFrente()
+{
 
     var cartadeFrente = listaCartas[Math.floor(Math.random() * listaCartas.length)];
     return cartadeFrente
 }
+*/

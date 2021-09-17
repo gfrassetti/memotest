@@ -3,8 +3,8 @@
   object-fit: fill;
   max-width: 100%;
   height: auto;
-  transform: scale(1.5);
-  margin-top: 2cm;
+  transform: scale(2);
+  margin-top: 3cm;
 }
 
 .jugadas {
