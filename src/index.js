@@ -1,22 +1,25 @@
-const listaCartas = ['src/img/cards/boo.jpg', 'src/img/cards/gogetassj4.jpg', 'src/img/cards/gokusjj.jpg','src/img/cards/janemba.jpg', 'src/img/cards/majinvegeta.jpg','src/img/cards/trunksssj.jpg','src/img/cards/vegetagt.jpg', 'src/img/cards/vegito.jpg']
+const listaCartas = [{ id: "1", src: 'src/img/cards/boo.jpg' }, { id: "2", src: 'src/img/cards/gogetassj4.jpg' }, { id: "3", src: 'src/img/cards/gokusjj.jpg' }, { id: "4", src: 'src/img/cards/janemba.jpg' }, { id: "5", src: 'src/img/cards/majinvegeta.jpg' }, { id: "6", src: 'src/img/cards/trunksssj.jpg' }, { id: "7", src: 'src/img/cards/vegetagt.jpg' }, { id: "8", src: 'src/img/cards/vegito.jpg' }]
+
 const cartas = document.querySelectorAll('.carta')
-repartirCartas()
+const intentos = []
+const puntaje = 0
+mezclarCartas()
 
-function repartirCartas()
-{
-    for (let i = 0; i < cartas.length; i++)
+function mezclarCartas() {
+    const cartasDuplicadas = listaCartas.concat(listaCartas)
+    const cartasRandom = cartasDuplicadas.sort(function () { return 0.5 - Math.random() })
+    for (let i = 0; i <  cartasRandom.length; i++)
     {
-        let srcCartaFrente = asiganarCartaFrente()
-        cartas[i].src = srcCartaFrente
+        cartas[i].id = cartasRandom[i].id
     }
-
 }
 
-function asiganarCartaFrente()
+function voltearCarta(e)
 {
-    var cartadeFrente = listaCartas[Math.floor(Math.random() * listaCartas.length)];
-    return cartadeFrente
+    let cartaFrente = e.target
+    console.log(cartaFrente)
 }
+
 
 /*
 function desbloquearInput()
