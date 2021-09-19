@@ -5,6 +5,7 @@ const intentos = []
 const puntaje = 0
 mezclarCartas()
 
+
 function mezclarCartas() {
     const cartasDuplicadas = listaCartas.concat(listaCartas)
     const cartasRandom = cartasDuplicadas.sort(function () { return 0.5 - Math.random() })
@@ -16,10 +17,10 @@ function mezclarCartas() {
 
 function voltearCarta(e)
 {
-    let cartaFrente = e.target
-    console.log(cartaFrente)
+    const $cartaFrente = e.target
+    const data = listaCartas.find(carta => carta.id === $cartaFrente.id) //find , es como un foreach, funcion flecha =>, puede llevar 3 params de los cuales retornara, elemento, indice, array
+    $cartaFrente.src = data.src
 }
-
 
 /*
 function desbloquearInput()
@@ -50,3 +51,8 @@ function asiganarCartaFrente()
     return cartadeFrente
 }
 */
+for (let i = 0; i < cartas.length; i++)
+{
+    var carta = cartas[i]
+    carta.addEventListener("click", voltearCarta)
+}
