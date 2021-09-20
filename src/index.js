@@ -50,6 +50,7 @@ function comprarCartas()
             console.log("Ambas se quedan asi")
             cartasAdivnadas.push(primerItem, segundoItem)
             console.log(cartasAdivnadas)
+            ganar();
         }
         else {
             
@@ -57,7 +58,8 @@ function comprarCartas()
             setTimeout(function () {
                 primerItem.src = srcCartaTrasera
                 segundoItem.src = srcCartaTrasera
-                perder()
+                perder();
+
             }, 1000)
         }
         setTimeout(function () {
@@ -105,13 +107,44 @@ function perder()
         {
             console.log("Perdiste")
 
-            vistaPerder()
+            mostrarVistaPerder()
             
         }    
     }
 }
 
-function vistaPerder()
+function ganar()
+{
+    if (cartasAdivnadas.length === 16)
+    {
+        if (intentos <= 15)
+        {
+            console.log("Ganaste")
+            mostrarVistaGanar()
+        }    
+    }
+}
+
+function mostrarVistaGanar()
+{
+    ocultarIntentos()
+    const container = document.querySelector('.cartas-container')
+    const tablero = document.querySelector('#tablero')
+    tablero.className = 'oculto'
+    const resetBtn = document.createElement('button')
+    const mensaje = document.createElement('h1')
+    mensaje.textContent = "Ganaste! :D , presiona reset para volver a comenzar"
+    mensaje.id = "mensaje-ganaste"
+    resetBtn.type = 'reset'
+    resetBtn.innerText = "Reset "
+    resetBtn.id = 'resetBtn'
+    resetBtn.className = "btn btn-outline-primary btn-lg"
+    resetBtn.onclick = refresPage
+    container.appendChild(resetBtn)
+    container.appendChild(mensaje)
+}
+
+function mostrarVistaPerder()
 {
     ocultarIntentos()
     const container = document.querySelector('.cartas-container')
