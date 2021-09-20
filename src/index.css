@@ -1,10 +1,9 @@
 .logo {
   text-align: center;
   object-fit: fill;
-  max-width: 100%;
   height: auto;
   transform: scale(2);
-  margin-top: 3cm;
+  margin-top: 2cm;
 }
 
 .jugadas {
