@@ -2,7 +2,8 @@
   text-align: center;
   object-fit: fill;
   height: auto;
-  margin-top: 1cm;
+  margin-top: 2cm;
+  transform: scale(1.5);
 }
 
 .jugadas {
