@@ -3,9 +3,10 @@ const listaCartas = [{ name: "boo", id: "1", src: 'src/img/cards/boo.jpg' }, { n
 const cartas = document.querySelectorAll('.carta')
 let intentos = 0;
 let secuenciaTurno = []
+let cartasAdivnadas = []
 const srcCartaTrasera = 'src/img/cards/2082113.png'
 mezclarCartas()
-perder()
+
 
 //--------------------------------- -------------------------------------------------    -------------------------
 
@@ -23,18 +24,16 @@ function voltearCarta(e)
     const $cartaFrente = e.target
     if (secuenciaTurno.length < 2)
     {
-
         const data = listaCartas.find(carta => carta.id === $cartaFrente.id) //find , es como un foreach, funcion flecha =>, puede llevar 3 params de los cuales retornara, elemento, indice, array
         $cartaFrente.src = data.src
-        console.log($cartaFrente)
         secuenciaTurno.push($cartaFrente)
         comprarCartas($cartaFrente)
     }
     else {
-        bloquearInput($cartaFrente)
-        console.log("Mas de dos")
+        $cartaFrente = null
     }
-    console.log(secuenciaTurno.length)
+
+
 }
 
 function comprarCartas()
@@ -45,20 +44,21 @@ function comprarCartas()
 
     if (secuenciaTurno.length === 2)
     {
-        console.log(secuenciaTurno)
         if (primerItem.id === segundoItem.id)
         {
             intentos++;
             console.log("Ambas se quedan asi")
-
+            cartasAdivnadas.push(primerItem, segundoItem)
+            console.log(cartasAdivnadas)
         }
         else {
+            
             intentos++;
             setTimeout(function () {
                 primerItem.src = srcCartaTrasera
                 segundoItem.src = srcCartaTrasera
+                perder()
             }, 1000)
-            console.log("Deberian darse vuelta las dos")
         }
         setTimeout(function () {
             vaciarCartasVolteadas() 
@@ -82,23 +82,58 @@ function intentosEnPantalla()
     }
 }
 
-function bloquearInput($cartaFrente)
+function ocultarIntentos()
 {
-
-    $cartaFrente.removeEventListener("click", voltearCarta) 
-
+    let elementoIntentos = document.querySelector('#intentos')
+    elementoIntentos.textContent = ""
 
 }
+
+
+/*
+function bloquearInput($cartaFrente)
+{
+    $cartaFrente.removeEventListener("click", voltearCarta) 
+}
+*/
 
 function perder()
 {
-    if (intentos === 10)
+    if (intentos === 15)
     {
-        console.log("Perdiste")
-        
+        if (cartasAdivnadas.length < 16)
+        {
+            console.log("Perdiste")
+
+            vistaPerder()
+            
+        }    
     }
 }
 
+function vistaPerder()
+{
+    ocultarIntentos()
+    const container = document.querySelector('.cartas-container')
+    const tablero = document.querySelector('#tablero')
+    tablero.className = 'oculto'
+    const resetBtn = document.createElement('button')
+    const mensaje = document.createElement('h1')
+    mensaje.textContent = "Perdiste! :( , presiona reset para volver a comenzar"
+    mensaje.id = "mensaje-perdiste"
+    resetBtn.type = 'reset'
+    resetBtn.innerText = "Reset "
+    resetBtn.id = 'resetBtn'
+    resetBtn.className = "btn btn-outline-primary btn-lg"
+    resetBtn.onclick = refresPage
+    container.appendChild(resetBtn)
+    container.appendChild(mensaje)
+}
+
+function refresPage()
+{
+    window.location.reload()
+}
 //------------------- ------------------------------------------------------------------------------------------
 for (let i = 0; i < cartas.length; i++)
 {

@@ -45,3 +45,16 @@
   margin: 0 auto;
   font-size: 60px;
 }
+
+.oculto {
+  display: none;
+}
+
+#resetBtn {
+  font-size: 60px;
+}
+
+#mensaje-perdiste {
+  font-size: 60px;
+  margin-top: 30px;
+}
