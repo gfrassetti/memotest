@@ -6,10 +6,7 @@ let intentos = 0;
 let secuenciaTurno = []
 let cartasAdivnadas = []
 const srcCartaTrasera = 'src/img/cards/2082113.png'
-mezclarCartas()
 
-
-//--------------------------------- -------------------------------------------------    -------------------------
 
 function mezclarCartas() {
     const cartasDuplicadas = listaCartas.concat(listaCartas)
@@ -30,10 +27,10 @@ function voltearCarta(e)
         const data = listaCartas.find(carta => carta.id === $cartaFrente.id) //find , es como un foreach, funcion flecha =>, puede llevar 3 params de los cuales retornara, elemento, indice, array
         $cartaFrente.src = data.src
         secuenciaTurno.push($cartaFrente)
-        comprarCartas($cartaFrente)
+        comprarCartas()
     }
     else {
-        $cartaFrente = null
+        $cartaFrente = ""
     }
 
 
@@ -82,7 +79,7 @@ function intentosEnPantalla()
     let elementoIntentos = document.querySelector('#intentos')
     if (intentos !== 0 )
     {
-        elementoIntentos.textContent = "Intentos: " + intentos
+        elementoIntentos.textContent = "Intentos: " + intentos+"/15"
     }
 }
 
@@ -93,14 +90,6 @@ function ocultarIntentos()
     elementoIntentos.textContent = ""
 
 }
-
-
-/*
-function bloquearInput($cartaFrente)
-{
-    $cartaFrente.removeEventListener("click", voltearCarta) 
-}
-*/
 
 function perder()
 {
@@ -195,3 +184,4 @@ for (let i = 0; i < cartas.length; i++)
     var carta = cartas[i]
     carta.addEventListener("click", voltearCarta)
 }
+mezclarCartas()
