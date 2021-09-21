@@ -1,4 +1,5 @@
-const listaCartas = [{ name: "boo", id: "1", src: 'src/img/cards/boo.jpg' }, { name: "gogetassj4",id: "2", src: 'src/img/cards/gogetassj4.jpg' }, { name: "gokussj",id: "3", src: 'src/img/cards/gokusjj.jpg' }, {name: "janemba", id: "4", src: 'src/img/cards/janemba.jpg' }, {name: "majinvegeta", id: "5", src: 'src/img/cards/majinvegeta.jpg' }, {name: "trunksssj", id: "6", src: 'src/img/cards/trunksssj.jpg' }, {name: "vegetagt", id: "7", src: 'src/img/cards/vegetagt.jpg' }, { name: "vegito",id: "8", src: 'src/img/cards/vegito.jpg' }, { name: "vegito",id: "9", src: 'src/img/cards/bulma.jpg' }]
+
+const listaCartas = [{ name: "boo", id: "1", src: 'src/img/cards/boo.jpg' }, { name: "gogetassj4", id: "2", src: 'src/img/cards/gogetassj4.jpg' }, { name: "gokussj", id: "3", src: 'src/img/cards/gokusjj.jpg' }, { name: "janemba", id: "4", src: 'src/img/cards/janemba.jpg' }, { name: "majinvegeta", id: "5", src: 'src/img/cards/majinvegeta.jpg' }, { name: "trunksssj", id: "6", src: 'src/img/cards/trunksssj.jpg' }, { name: "vegetagt", id: "7", src: 'src/img/cards/vegetagt.jpg' }, { name: "vegito", id: "8", src: 'src/img/cards/vegito.jpg' }, { name: "vegito", id: "9", src: 'src/img/cards/bulma.jpg' }]
 
 const cartas = document.querySelectorAll('.carta')
 let intentos = 0;
@@ -21,7 +22,8 @@ function mezclarCartas() {
 
 function voltearCarta(e)
 {
-
+    timer()
+    setInterval(setTime, 1000);
     const $cartaFrente = e.target
     fxVoltearCarta($cartaFrente)
     if (secuenciaTurno.length < 2)
