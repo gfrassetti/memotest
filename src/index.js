@@ -21,7 +21,6 @@ function voltearCarta(e)
 {
 
     let $cartaFrente = e.target
-    fxVoltearCarta($cartaFrente)
     if (secuenciaTurno.length < 2)
     {
         const data = listaCartas.find(carta => carta.id === $cartaFrente.id) //find , es como un foreach, funcion flecha =>, puede llevar 3 params de los cuales retornara, elemento, indice, array
@@ -32,6 +31,15 @@ function voltearCarta(e)
     else {
         $cartaFrente = ""
     }
+
+    if ($cartaFrente.className === "carta")
+    {
+        $cartaFrente.classList.add('card-back')    
+    }
+    else {
+        $cartaFrente.className = "carta"
+    }
+
 
 
 }
@@ -166,22 +174,11 @@ function refresPage()
     window.location.reload()
 }
 
-function fxVoltearCarta($cartaFrente)
-{
-    if ($cartaFrente.className === "carta")
-    {
-        $cartaFrente.classList.add('card-back')    
-    }
-    else {
-        $cartaFrente.className = "carta"
-    }
-}
 
 
 //------------------- ------------------------------------------------------------------------------------------
-for (let i = 0; i < cartas.length; i++)
-{
-    var carta = cartas[i]
+cartas.forEach(function (carta) {
     carta.addEventListener("click", voltearCarta)
-}
+})
+
 mezclarCartas()
