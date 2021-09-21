@@ -22,9 +22,8 @@ function mezclarCartas() {
 
 function voltearCarta(e)
 {
-    timer()
-    setInterval(setTime, 1000);
-    const $cartaFrente = e.target
+
+    let $cartaFrente = e.target
     fxVoltearCarta($cartaFrente)
     if (secuenciaTurno.length < 2)
     {
@@ -56,7 +55,7 @@ function comprarCartas()
             console.log(cartasAdivnadas)
             ganar();
         }
-        else if(primerItem.id !== segundoItem.id)
+        else
         {            
             intentos++;
             setTimeout(function () {
@@ -139,6 +138,8 @@ function mostrarVistaGanar()
     const mensaje = document.createElement('h1')
     mensaje.textContent = "Ganaste! :D , presiona reset para volver a comenzar"
     mensaje.id = "mensaje-ganaste"
+    const a = document.querySelector('a')
+    a.className = 'oculto'
     resetBtn.type = 'reset'
     resetBtn.innerText = "Reset "
     resetBtn.id = 'resetBtn'
@@ -153,11 +154,13 @@ function mostrarVistaPerder()
     ocultarIntentos()
     const container = document.querySelector('.cartas-container')
     const tablero = document.querySelector('#tablero')
-    let githubIcon = document.querySelector('#github')
+    const githubIcon = document.querySelector('#github')
     githubIcon.className = 'oculto'
     tablero.className = 'oculto'
     const resetBtn = document.createElement('button')
     const mensaje = document.createElement('h1')
+    const a = document.querySelector('a')
+    a.className = 'oculto'
     mensaje.textContent = "Perdiste! :( , presiona reset para volver a comenzar"
     mensaje.id = "mensaje-perdiste"
     resetBtn.type = 'reset'
