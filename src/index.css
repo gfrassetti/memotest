@@ -1,42 +1,41 @@
 .logo {
   text-align: center;
   object-fit: fill;
-  height: auto;
-  margin-top: 2cm;
   transform: scale(1.5);
 }
 
 .jugadas {
   text-align: center;
-  margin-top: 3cm;
+  margin-left: 5%;
+  margin-bottom: 40px;
 }
 
 * {
   transition: all 0.3s ease;
   user-select: none;
-  font-family: "Bebas Neue", cursive;
 }
 
 .cartas-container {
   display: grid;
   justify-content: center;
-  margin-top: 4cm;
 }
 
 .carta {
   width: 380px;
   border-radius: 4px;
-  height: auto;
   object-fit: contain;
   cursor: pointer;
 }
 
+.carta img {
+  height: max-content;
+}
+
 .div-carta {
   cursor: pointer;
-  margin-top: 3px;
   width: 380px;
   height: 557px;
-  margin: 20px;
+  margin: 10px;
 }
 
 .row {
@@ -60,4 +59,22 @@
 #mensaje-ganaste {
   font-size: 60px;
   margin-top: 30px;
+}
+
+.card-back {
+  transform: rotateY(360deg);
+}
+
+#timer {
+  margin-right: 50%;
+}
+
+#github {
+  margin-top: 30px;
+  margin-left: 50%;
+  display: inline-block;
+}
+
+#github :hover {
+  transform: scale(1.3);
 }
