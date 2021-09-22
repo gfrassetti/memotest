@@ -26,6 +26,7 @@ function voltearCarta(e)
         const data = listaCartas.find(carta => carta.id === $cartaFrente.id) //find , es como un foreach, funcion flecha =>, puede llevar 3 params de los cuales retornara, elemento, indice, array
         $cartaFrente.src = data.src
         secuenciaTurno.push($cartaFrente)
+        console.log($cartaFrente)
         comprarCartas()
     }
     else {
@@ -57,10 +58,14 @@ function comprarCartas()
             intentos++;
             console.log("Ambas se quedan asi")
             cartasAdivnadas.push(primerItem, segundoItem)
+            for (let i = 0; i < cartasAdivnadas.length; i++)
+            {
+                cartasAdivnadas[i].style.pointerEvents = 'none'
+            }
             console.log(cartasAdivnadas)
             ganar();
         }
-        else
+        else if (primerItem.id !== segundoItem.id)
         {            
             intentos++;
             setTimeout(function () {
@@ -87,7 +92,7 @@ function intentosEnPantalla()
     let elementoIntentos = document.querySelector('#intentos')
     if (intentos !== 0 )
     {
-        elementoIntentos.textContent = "Intentos: " + intentos+"/15"
+        elementoIntentos.textContent = intentos+"/15"
     }
 }
 
