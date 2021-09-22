@@ -3,7 +3,7 @@ const listaCartas = [{ name: "boo", id: "1", src: 'src/img/cards/boo.jpg' }, { n
 
 const cartas = document.querySelectorAll('.carta')
 let intentos = 0;
-let secuenciaTurno = []
+let cartasComparadas = []
 let cartasAdivnadas = []
 const srcCartaTrasera = 'src/img/cards/2082113.png'
 
@@ -21,11 +21,12 @@ function voltearCarta(e)
 {
 
     let $cartaFrente = e.target
-    if (secuenciaTurno.length < 2)
+    const data = listaCartas.find(carta => carta.id === $cartaFrente.id)
+    
+    if (cartasComparadas.length < 2)
     {
-        const data = listaCartas.find(carta => carta.id === $cartaFrente.id) //find , es como un foreach, funcion flecha =>, puede llevar 3 params de los cuales retornara, elemento, indice, array
         $cartaFrente.src = data.src
-        secuenciaTurno.push($cartaFrente)
+        cartasComparadas.push($cartaFrente)
         console.log($cartaFrente)
         comprarCartas()
     }
@@ -41,17 +42,20 @@ function voltearCarta(e)
         $cartaFrente.className = "carta"
     }
 
+    if (cartasComparadas.length === 1) 
+    {
+        $cartaFrente.removeEventListener("click", voltearCarta)
 
-
+    }
 }
 
 function comprarCartas()
 {
-    let primerItem = secuenciaTurno[0]
+    let primerItem = cartasComparadas[0]
 
-    let segundoItem = secuenciaTurno[1]
+    let segundoItem = cartasComparadas[1]
 
-    if (secuenciaTurno.length === 2)
+    if (cartasComparadas.length === 2)
     {
         if (primerItem.id === segundoItem.id)
         {
@@ -60,10 +64,9 @@ function comprarCartas()
             cartasAdivnadas.push(primerItem, segundoItem)
             for (let i = 0; i < cartasAdivnadas.length; i++)
             {
-                cartasAdivnadas[i].style.pointerEvents = 'none'
+                cartasAdivnadas[i].removeEventListener('click', voltearCarta)
             }
-            console.log(cartasAdivnadas)
-            ganar();
+            ganar()
         }
         else if (primerItem.id !== segundoItem.id)
         {            
@@ -71,11 +74,11 @@ function comprarCartas()
             setTimeout(function () {
                 primerItem.src = srcCartaTrasera
                 segundoItem.src = srcCartaTrasera
-                perder();
+                perder()
             }, 1000)
         }
         setTimeout(function () {
-            vaciarCartasVolteadas() 
+            vaciarCartasVolteadas()
         }, 1000)
 
         intentosEnPantalla()
@@ -84,7 +87,8 @@ function comprarCartas()
 
 function vaciarCartasVolteadas()
 {
-    secuenciaTurno = []
+    cartasComparadas = []
+
 }
 
 function intentosEnPantalla()
@@ -98,8 +102,7 @@ function intentosEnPantalla()
 
 function ocultarIntentos()
 {
-    let elementoIntentos = document.querySelector('#intentos')
-
+    const elementoIntentos = document.querySelector('#intentos')
     elementoIntentos.textContent = ""
 
 }
@@ -168,10 +171,12 @@ function mostrarVistaPerder()
     resetBtn.type = 'reset'
     resetBtn.innerText = "Reset "
     resetBtn.id = 'resetBtn'
-    resetBtn.className = "btn btn-outline-primary btn-lg"
+    resetBtn.className = "btn btn-danger btn-lg"
     resetBtn.onclick = refresPage
     container.appendChild(resetBtn)
     container.appendChild(mensaje)
+    const imgIntentos = document.querySelector('#intentos-img')
+    imgIntentos.className = "oculto"
 }
 
 function refresPage()

@@ -50,6 +50,7 @@
 
 #resetBtn {
   font-size: 60px;
+  margin-top: 40%;
 }
 
 #mensaje-perdiste {
@@ -64,6 +65,7 @@
 .card-back {
   transform: rotateY(360deg);
 }
+
 #github {
   margin-left: 50%;
   display: inline-block;
