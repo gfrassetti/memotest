@@ -31,6 +31,7 @@ function voltearCarta(e)
         comprarCartas()
     }
     else {
+        //evitar que 3 cartas se den vuelta
         $cartaFrente = ""
     }
 
@@ -41,10 +42,13 @@ function voltearCarta(e)
     else {
         $cartaFrente.className = "carta"
     }
+// evitar que la primera carta dada vuelta se vuelva a presionar
+    if (cartasComparadas.length === 1) {
+        cartasComparadas[0].style.pointerEvents = 'none'
 
-    if (cartasComparadas.length === 1) 
-    {
-        $cartaFrente.removeEventListener("click", voltearCarta)
+    }
+    else {
+        cartasComparadas[0].style.pointerEvents = 'auto'
 
     }
 }
@@ -62,9 +66,10 @@ function comprarCartas()
             intentos++;
             console.log("Ambas se quedan asi")
             cartasAdivnadas.push(primerItem, segundoItem)
+            //evitar que las cartas dadas vuelta se vuelvan a dar vuelta
             for (let i = 0; i < cartasAdivnadas.length; i++)
             {
-                cartasAdivnadas[i].removeEventListener('click', voltearCarta)
+                cartasAdivnadas[i].removeEventListener('click', voltearCarta) 
             }
             ganar()
         }
