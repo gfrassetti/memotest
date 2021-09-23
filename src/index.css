@@ -23,7 +23,7 @@
 .carta {
   width: 390px;
   height: 637px;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
 }
 .carta img {

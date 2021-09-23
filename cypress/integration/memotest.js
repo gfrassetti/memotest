@@ -1,5 +1,7 @@
+/// <reference types="Cypress" />
 
-const URL = '127.0.0.1:8080';
+
+const URL = 'http://127.0.0.1:8080';
 
 context('Memotest', () => {
     before(() => {
@@ -11,4 +13,9 @@ it('test', () => {
 
 });
 
+describe('Comienza el juego', () => {
+    const NUMERO_CARTAS = 16;
+    it('Verifica que haya un tablero con cartas', () => {
+      cy.get('#memotest').find('.card-size').should('have.length', NUMERO_CARTAS)
+    })
 

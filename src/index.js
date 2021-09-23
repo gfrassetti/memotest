@@ -146,7 +146,7 @@ function mostrarVistaGanar()
     tablero.className = 'oculto'
     const resetBtn = document.createElement('button')
     const mensaje = document.createElement('h1')
-    mensaje.textContent = "Ganaste! :D , presiona reset para volver a comenzar"
+    mensaje.textContent = "Ganaste! :D , pero que Gatona, que gatotona!"
     mensaje.id = "mensaje-ganaste"
     const a = document.querySelector('a')
     a.className = 'oculto'
@@ -171,7 +171,7 @@ function mostrarVistaPerder()
     const mensaje = document.createElement('h1')
     const a = document.querySelector('a')
     a.className = 'oculto'
-    mensaje.textContent = "Perdiste! :( , presiona reset para volver a comenzar"
+    mensaje.textContent = "Perdiste! :( , perdiste Morro! volve a intentar"
     mensaje.id = "mensaje-perdiste"
     resetBtn.type = 'reset'
     resetBtn.innerText = "Reset "
