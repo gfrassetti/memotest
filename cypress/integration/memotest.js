@@ -1,21 +1,13 @@
-/// <reference types="Cypress" />
-
-
-const URL = 'http://127.0.0.1:8080';
 
 context('Memotest', () => {
     before(() => {
-        cy.visit(URL)
+        cy.visit("http://127.0.0.1:8080")
     })
 });
-
-it('test', () => {
-
-});
-
 describe('Comienza el juego', () => {
-    const NUMERO_CARTAS = 16;
+    const NUMERO_CARTAS = 18;
     it('Verifica que haya un tablero con cartas', () => {
-      cy.get('#memotest').find('.card-size').should('have.length', NUMERO_CARTAS)
+        cy.get('#tablero').find('.carta').should('have.length', NUMERO_CARTAS)
     })
+})
 
