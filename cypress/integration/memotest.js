@@ -14,17 +14,17 @@ context('Memotest', () => {
         })
 
         it('Chequea que las cartas sean aleatorias', () => {
-            cy.get('.carta').then((listaCartas) => {
+            cy.get('.carta').then((cartas) => {
                 let idImg = [];
-                listaCartas.each((i, carta) => {
+                cartas.each((i, carta) => {
                     idImg.push(carta.id)
                 })
 
                 cy.visit('http://127.0.0.1:8080')
 
-                cy.get('.carta').then((listaCartas) => {
+                cy.get('.carta').then((cartas) => {
                     let idNuevos = [];
-                    listaCartas.each((i, carta) => {
+                    cartas.each((i, carta) => {
                         idNuevos.push(carta.id)
                     })
                 
@@ -37,24 +37,27 @@ context('Memotest', () => {
     
     describe('Resuelve el juego', () => {
         const CANTIDAD_CARTAS = 18;
-        let mapaDeCartas, arrCartasIguales
+        let mapaDeCartas, listaCartasAdivinadas
         it('Elijo una carta errónea', () => {
-          cy.get('.carta').then((listaCartas) => {
-            mapaDeCartas = obtenerCartasIguales(listaCartas)
-            arrCartasIguales = Object.values(mapaDeCartas)
-            arrCartasIguales[0][0].click();
-            arrCartasIguales[1][0].click();
+          cy.get('.carta').then((cartas) => {
+            mapaDeCartas = obtenerCartasIguales(cartas)
+            listaCartasAdivinadas = Object.values(mapaDeCartas)
+            listaCartasAdivinadas[0][0].click();
+            listaCartasAdivinadas[1][0].click();
             cy.get('.carta').should('have.length', CANTIDAD_CARTAS)
           })
         })
 
         it('Gana el juego', () => {
-            arrCartasIguales.forEach((par) => {
+            listaCartasAdivinadas.forEach((par) => {
               console.log(par);
               cy.get(par[0]).click()
               cy.get(par[1]).click()
+
             })
+            cy.wrap(listaCartasAdivinadas).should('have.length', 9)
         })
+
     })
 });
 
