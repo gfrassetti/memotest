@@ -146,7 +146,7 @@ function mostrarVistaGanar()
     tablero.className = 'oculto'
     const resetBtn = document.createElement('button')
     const mensaje = document.createElement('h1')
-    mensaje.textContent = "Ganaste! :D , pero que Gatona, que gatotona!"
+    mensaje.textContent = "Ganaste!🥳 , pero que Gatona, que gatotona!"
     mensaje.id = "mensaje-ganaste"
     const a = document.querySelector('a')
     a.className = 'oculto'
