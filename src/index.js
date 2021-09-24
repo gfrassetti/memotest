@@ -73,7 +73,7 @@ function comprarCartas()
             }
             ganar()
         }
-        else if (primerItem.id !== segundoItem.id)
+        else //if (primerItem.id !== segundoItem.id)
         {            
             intentos++;
             setTimeout(function () {
@@ -114,27 +114,22 @@ function ocultarIntentos()
 
 function perder()
 {
-    if (intentos === 15)
+    if (intentos >= 15 && cartasAdivnadas.length < 18)
     {
-        if (cartasAdivnadas.length < 18)
-        {
-            console.log("Perdiste")
-
-            mostrarVistaPerder()
-            
-        }    
+        console.log("Perdiste")
+        mostrarVistaPerder()
+             
     }
 }
 
 function ganar()
 {
-    if (cartasAdivnadas.length === 18)
+    if (cartasAdivnadas.length === 18 && intentos <= 15)
     {
-        if (intentos <= 15)
-        {
-            console.log("Ganaste")
-            mostrarVistaGanar()
-        }    
+
+        console.log("Ganaste")
+        mostrarVistaGanar()
+          
     }
 }
 
@@ -153,7 +148,7 @@ function mostrarVistaGanar()
     resetBtn.type = 'reset'
     resetBtn.innerText = "Reset "
     resetBtn.id = 'resetBtn'
-    resetBtn.className = "btn btn-outline-primary btn-lg"
+    resetBtn.className = "btn btn-warning btn-lg"
     resetBtn.onclick = refresPage
     container.appendChild(resetBtn)
     container.appendChild(mensaje)
