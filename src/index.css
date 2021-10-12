@@ -1,5 +1,6 @@
-html {
-  zoom: 33%;
+html,
+body {
+  zoom: 100%;
 }
 
 .logo {
