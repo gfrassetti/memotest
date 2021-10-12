@@ -1,3 +1,7 @@
+html {
+  zoom: 33%;
+}
+
 .logo {
   text-align: center;
   object-fit: fill;
