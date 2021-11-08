@@ -31,16 +31,14 @@
   border-radius: 20px;
   cursor: pointer;
 }
-.carta img {
-  max-width: 100%;
+.carta {
+  width: 100%;
   max-height: 100%;
 }
 
 .div-carta {
   cursor: pointer;
-  width: 380px;
-  height: 100%;
-  margin: 10px;
+  width: 16%;
 }
 
 .row {
@@ -70,7 +68,7 @@
 }
 
 #github {
-  padding-top: 6%;
+  padding-top: 2%;
   height: 100vh;
   display: flex;
   flex-direction: row;
