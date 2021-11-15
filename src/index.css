@@ -68,14 +68,14 @@
   transform: rotateY(360deg);
 }
 
-#github {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-
 #github :hover {
   transform: scale(1.1);
+}
+
+#github-a {
+  width: 25%;
+  margin: 0;
+  margin-left: 50%;
 }
 
 body {
