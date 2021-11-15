@@ -33,7 +33,6 @@
 
 .carta {
   max-width: 100%;
-  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -78,7 +77,7 @@
   margin-left: 50%;
 }
 
-#github{
+#github {
   width: 10%;
   height: 10%;
 }
