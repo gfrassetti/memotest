@@ -158,7 +158,7 @@ function mostrarVistaPerder()
 {
     ocultarIntentos()
     const container = document.querySelector('.cartas-container')
-    const tablero = document.querySelector('#tablero')
+    const tablero = document.querySelector('.tablero')
     const githubIcon = document.querySelector('#github')
     githubIcon.className = 'oculto'
     tablero.className = 'oculto'
