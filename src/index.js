@@ -107,7 +107,7 @@ function intentosEnPantalla()
 
 function ocultarIntentos()
 {
-    const elementoIntentos = document.querySelector('#intentos')
+    const elementoIntentos = document.querySelector('.intentos')
     elementoIntentos.textContent = ""
 
 }

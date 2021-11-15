@@ -78,6 +78,11 @@
   margin-left: 50%;
 }
 
+#github{
+  width: 5%;
+  height: 5%;
+}
+
 body {
   background-image: url(../src/img/body/end.gif);
   background-size: cover;
