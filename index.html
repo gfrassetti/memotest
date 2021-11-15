@@ -1,105 +1,133 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>DBZ Memotest</title>
-    <link rel="icon" href="/src/img/logo/favicon.png" type="image/x-icon">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='node_modules/bootstrap/dist/css/bootstrap.min.css'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/index.css">
+    <link rel="icon" href="/src/img/logo/favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/index.css" />
 
-    <header permissions-policy: interest-cohort=()></header>
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="row" >
-            <div class="logo">
-              <img src="src/img/logo/logo.png" id="img-logo">
-            </div>
+    <header permissions-policy: interest-cohort="()"></header>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center flex-column">
+        <div class="logo">
+          <img src="src/img/logo/logo.png" id="img-logo" />
         </div>
-        <div class="jugadas" id="jugadas">
-          <div class="row">
-            <div class="col-lg-6 intentos">
-              <img src="https://fontmeme.com/permalink/210922/55f0d31ecad3df4931cce3aec59d3ef5.png" id="intentos-img" alt="">
-              <label id="intentos-label" class="intentos">0/0</label>
-            </div>
+      <div class="jugadas d-flex justify-content-between" id="jugadas">
+            <img
+              src="https://fontmeme.com/permalink/210922/55f0d31ecad3df4931cce3aec59d3ef5.png"
+              id="intentos-img"
+              alt=""
+            />
+            <label id="intentos-label" class="intentos">0/0</label>
+      </div>
+    </div>
+    <div class="container cartas-container">
+      <div id=" container-fluid tablero">
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 div-carta">
+            <img src="src/img/cards/2082113.png" alt="" class="carta" />
           </div>
         </div>
     </div>
-        <div class="cartas-container">
-          <div id="tablero">
-            <div class="row">
-                <div class="div-carta">
-                  <img src="src/img/cards/2082113.png" alt=""class="carta">
-                </div>
-                <div class="div-carta">
-                  <img src="src/img/cards/2082113.png" alt=""class="carta">
-                </div>
-                <div class="div-carta">
-                  <img src="src/img/cards/2082113.png" alt="" class="carta">
-                </div>
-                <div class="div-carta">
-                  <img src="src/img/cards/2082113.png" alt=""class="carta">
-                </div>
-                <div class="div-carta">
-                  <img src="src/img/cards/2082113.png" alt=""class="carta">
-                </div>
-                <div class="div-carta">
-                  <img src="src/img/cards/2082113.png" alt="" class="carta">
-                </div> 
-            </div>
-            <div class="row">
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt="" class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt="" class="carta">
-              </div> 
-            </div>
-            <div class="row">
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png"alt="" class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt=""class="carta">
-              </div>
-              <div class="div-carta">
-                <img src="src/img/cards/2082113.png" alt="" class="carta">
-              </div>   
-            </div>
-        </div> 
-      </div>   
-  <div id="github">
-      <a href="https://github.com/gfrassetti" target="_blank">
-      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-      <lottie-player id="github-a" src="https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json"  background="transparent"  speed="4"  style="width: 90px; height: 90px;" hover loop autoplay ></lottie-player>
-      </a>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>        
-  <script src='src/index.js'></script>   
-</body>
+   <footer>
+      <div id="github">
+        <a href="https://github.com/gfrassetti" target="_blank">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player
+            id="github-a"
+            src="https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json"
+            background="transparent"
+            speed="4"
+            style="width: 30px; height: 30px"
+            hover
+            loop
+            autoplay
+          ></lottie-player>
+        </a>
+      </div>
+    </div>
+   </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js"></script>
+  </body>
 </html>
