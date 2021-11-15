@@ -171,7 +171,7 @@ function mostrarVistaPerder()
     resetBtn.type = 'reset'
     resetBtn.innerText = "Reset "
     resetBtn.id = 'resetBtn'
-    resetBtn.className = "btn btn-danger btn-lg"
+    resetBtn.className = "btn btn-danger"
     resetBtn.onclick = refresPage
     container.appendChild(resetBtn)
     container.appendChild(mensaje)
