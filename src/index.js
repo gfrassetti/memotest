@@ -98,7 +98,7 @@ function vaciarCartasVolteadas()
 
 function intentosEnPantalla()
 {
-    let elementoIntentos = document.querySelector('#intentos')
+    let elementoIntentos = document.querySelector('.intentos')
     if (intentos !== 0 )
     {
         elementoIntentos.textContent = intentos+"/15"
