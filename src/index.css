@@ -11,7 +11,7 @@
 
 .logo {
   width: 50%;
-  height: 350px;
+  height: 12%;
   margin: auto;
 }
 
@@ -87,7 +87,6 @@ body {
 }
 
 #intentos-img {
-  width: 100%;
   height: 100%;
 }
 
