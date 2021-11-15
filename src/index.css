@@ -35,6 +35,7 @@
 .carta {
   max-width: 100%;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .div-carta {
@@ -72,6 +73,7 @@
 #github :hover {
   transform: scale(1.1);
 }
+
 
 #github-a {
   width: 25%;
