@@ -137,7 +137,7 @@ function mostrarVistaGanar()
 {
     ocultarIntentos()
     const container = document.querySelector('.cartas-container')
-    const tablero = document.querySelector('#tablero')
+    const tablero = document.querySelector('.tablero')
     tablero.className = 'oculto'
     const resetBtn = document.createElement('button')
     const mensaje = document.createElement('h1')
